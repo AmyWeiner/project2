@@ -3,32 +3,34 @@
   </div>
 
   <div class="col-xs-10">
-    <div class="navbar-form">
-      <%= form_for @goal do |f| %>
+    <%= form_for @goal do |f| %>
 
         <div class="input-group-lg">
 
       <% if @goal.errors.any? %>
       <div id="error_explanation">
-        <h2><%= pluralize(@goal.errors.count, "error") %> prohibited this goal from being saved:</h2>
- 
-        <ul>
+        <h3 class="text-center"><%= pluralize(@goal.errors.count, "error") %> prohibited this goal from being saved</h3>
+
           <% @goal.errors.full_messages.each do |msg| %>
-            <li><%= msg %></li>
+            <p class="text-center"><%= msg %></p>
           <% end %>
-        </ul>
       </div>
       <% end %>
-          
-          <%= f.text_field :name, id: "goalForm", class: "form-control", placeholder: "Ex. Distance from Boston to New York" %>
 
-          <%= f.submit 'Get Started', class: "btn btn-primary btn-lg" %></br>
+
+
+        <div class="input-group">
+          <%= f.text_field :name, id: "goalForm", class: "form-control input-lg", placeholder: "Ex. Distance from Boston to New York" %>
+          <span class="input-group-btn">
+            <%= f.submit 'Get Started', class: "btn btn-primary btn-lg" %>
+          </span>
         </div>
-      <% end %>
-    </div>
+            </div>
+    <% end %>
+
   </div>
 
   <div class="col-xs-1 text-left">
   </div>
 
-</div>
+</div><!-- row close -->
