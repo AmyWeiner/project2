@@ -26,7 +26,7 @@ class Goal < ActiveRecord::Base
         goal.distance = goal.input_interpretation.to_f
       end
     end  
-    goal
+      goal
    end
 end
 
