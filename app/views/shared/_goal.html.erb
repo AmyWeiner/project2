@@ -7,25 +7,20 @@
       <%= form_for @goal do |f| %>
 
         <div class="input-group-lg">
-<<<<<<< HEAD
 
-<% if @goal.errors.any? %>
-  <div id="error_explanation">
-    <h2><%= pluralize(@goal.errors.count, "error") %> prohibited this goal from being saved:</h2>
+      <% if @goal.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@goal.errors.count, "error") %> prohibited this goal from being saved:</h2>
  
-    <ul>
-    <% @goal.errors.full_messages.each do |msg| %>
-      <li><%= msg %></li>
-    <% end %>
-    </ul>
-  </div>
-<% end %>
-
+        <ul>
+          <% @goal.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+      <% end %>
           
-        <%= f.text_field :name, id: "goalForm", class: "form-control", placeholder: "Ex. Distance from Boston to New York" %>
-=======
           <%= f.text_field :name, id: "goalForm", class: "form-control", placeholder: "Ex. Distance from Boston to New York" %>
->>>>>>> 9686e2ef5aa26697319053b279891ba5754787f0
 
           <%= f.submit 'Get Started', class: "btn btn-primary btn-lg" %></br>
         </div>
@@ -37,4 +32,3 @@
   </div>
 
 </div>
-
